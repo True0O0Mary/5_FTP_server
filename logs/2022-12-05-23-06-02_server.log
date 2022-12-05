@@ -1,0 +1,5 @@
+[2022-12-05 23:06:02,642] - INFO - Server started with :50400
+[2022-12-05 23:06:23,530] - INFO - Received: getpath from: ('127.0.0.1', 54130)
+[2022-12-05 23:06:36,720] - INFO - Received: makedir chchhc from: ('127.0.0.1', 54130)
+[2022-12-05 23:06:46,781] - INFO - Received: create file from: ('127.0.0.1', 54130)
+[2022-12-05 23:07:03,599] - INFO - Received:  from: ('127.0.0.1', 54130)

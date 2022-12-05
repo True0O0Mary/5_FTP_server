@@ -1,0 +1,13 @@
+2022-12-05 22:12:24.526189,Mary,createfile new
+2022-12-05 22:12:44.023929,Mary,makedir true
+2022-12-05 22:12:50.905791,Mary,changedir true
+2022-12-05 22:16:18.938214,Mary,getpath
+2022-12-05 22:16:27.705043,Mary,createfile url
+2022-12-05 22:18:49.050119,Mary,close
+2022-12-05 22:18:49.050341,Mary,Disconnected
+2022-12-05 22:45:51.331746,Mary,getpath
+2022-12-05 22:46:03.345532,Mary,makedir new
+2022-12-05 22:46:07.802037,Mary,makedir t
+2022-12-05 22:46:12.802079,Mary,close
+2022-12-05 22:46:12.802228,Mary,Disconnected
+2022-12-05 23:07:03.599925,Mary,Disconnected
