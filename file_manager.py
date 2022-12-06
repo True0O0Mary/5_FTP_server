@@ -1,16 +1,18 @@
 import os
 import shutil
 import pathlib
+from time import sleep
 
+PATH = "/home/odinmary/5_FTP_server"
 class FileManager:
     def __init__(self, name):
         # self.first_path = str(os.getcwd())
         if name == "admin":
-            self.root = str(os.getcwd())
+            self.root = PATH
             self.first_path = self.root
             self.current_path = self.first_path
         else:
-            self.first_path = os.path.join(os.getcwd(), name)
+            self.first_path = os.path.join(PATH, name)
             self.current_path = self.first_path
             if not os.path.isdir(name):
                 os.mkdir(name)
@@ -60,13 +62,17 @@ class FileManager:
 
     # 4
     def createfile(self, name):
+
         try:
-            file = open(name, "w", encoding="utf-8")
+            if not os.path.isfile(os.path.join(self.current_path, name)):
+                file = open(name, "w", encoding="utf-8")
+            else:
+                return "Its file exists"
             # if self.dirSize(self.first_path)>self._limit:
             #     os.remove(name)
             #     return "Limit reached"
         except:
-            return "Incorrect directory name or its file exists"
+            return "Incorrect file name"
 
 
     # 5
@@ -188,8 +194,15 @@ def handle_ftp_request(act: str, session):
 
 
 if __name__ == "__main__":
-    # print(help())
-    print(pathlib.Path.cwd().joinpath("logs"))
+    print(help())
+    # print(pathlib.Path.cwd().joinpath("logs"))
+    # sec = FileManager("nnn")
+    # sec.createfile("rem")
+    # sleep(5)
+    # sec.removefile("rem")
+
+    # file = open("rem", "w", encoding="utf-8")
+
     # name = input("Input login: ")
     # session = FileManager(name)
     # while True:

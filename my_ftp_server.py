@@ -2,7 +2,6 @@ import socket
 import threading
 from file_manager import handle_ftp_request, FileManager
 from datetime import datetime
-from history import write_message
 
 import logging
 import pathlib
@@ -60,7 +59,6 @@ def handle_connection(conn, addr):
                     data = f
             except IOError:
                 print("Incorrect action requested")
-                write_message(datetime.now(), name, "Incorrect action requested")
                 logger.error("Incorrect action requested")
             # send answer
             if data:
@@ -70,7 +68,7 @@ def handle_connection(conn, addr):
                     print(f"Client suddenly closed, cannot send")
                     logger.error("Client suddenly closed, cannot send")
                     break
-        write_message(datetime.now(), name, f"Disconnected")
+
         logger.info("Disconnected")
         print("Disconnected by", addr)
 
